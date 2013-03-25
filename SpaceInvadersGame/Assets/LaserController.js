@@ -9,6 +9,19 @@ function Update () {
 	
 }
 
+function OnTriggerEnter(other:Collider)
+{
+	if(other.gameObject.tag=="alien")
+	{
+		SpaceshipController.score++;
+		//destroy the alien
+		Destroy(other.gameObject);
+		//destroy the laser
+		Destroy(this.gameObject);
+	}
+}
+
+
 function OnBecameInvisible()
 {
 	Destroy(this.gameObject);

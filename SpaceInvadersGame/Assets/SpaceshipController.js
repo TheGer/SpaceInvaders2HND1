@@ -1,6 +1,13 @@
 #pragma strict
 
 var laserSlot:Rigidbody;
+static var score:int;
+
+function OnGUI()
+{
+	GUI.color = Color.green;
+	GUI.Label(Rect(0,0,100,25),"Score: "+score);
+}
 
 
 function Start () {
